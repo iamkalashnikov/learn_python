@@ -1,0 +1,21 @@
+R1:
+  Eth 0/0: !!python/tuple [SW1, Eth 0/1]
+R2:
+  Eth 0/0: !!python/tuple [SW1, Eth 0/2]
+  Eth 0/1: !!python/tuple [SW2, Eth 0/11]
+R3:
+  Eth 0/0: !!python/tuple [SW1, Eth 0/3]
+  Eth 0/1: !!python/tuple [R4, Eth 0/0]
+  Eth 0/2: !!python/tuple [R5, Eth 0/0]
+R4:
+  Eth 0/0: !!python/tuple [SW1, Eth 0/4]
+  Eth 0/1: !!python/tuple [R5, Eth 0/1]
+R5:
+  Eth 0/0: !!python/tuple [R2, Eth 0/1]
+  Eth 0/1: !!python/tuple [R4, Eth 0/1]
+R6:
+  Eth 0/1: !!python/tuple [R2, Eth 0/2]
+SW1:
+  Eth 0/1: !!python/tuple [R1, Eth 0/0]
+  Eth 0/2: !!python/tuple [R2, Eth 0/0]
+  Eth 0/3: !!python/tuple [R3, Eth 0/0]
