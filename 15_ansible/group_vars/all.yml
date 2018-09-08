@@ -7,4 +7,6 @@ cli:
   transport: cli
   authorize: yes
   auth_pass: "cisco"
+  ansible_connection: local
+  
 

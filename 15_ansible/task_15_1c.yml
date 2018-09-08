@@ -1,0 +1,25 @@
+---
+
+- name: Run show ARP and Interface Brief commands on routers
+  hosts: cisco-routers
+  
+  tasks:
+  
+    - name: show arp
+      ios_command:
+        commands: 
+          - show arp
+          - sh ip int brief
+        provider: "{{ cli }}"
+      register: result
+      
+    - name: Show arp result
+      debug: var = result.stdout_lines[0]
+     
+    - name: Show int br result
+      debug: var = result.stdout_lines[1]
+      
+      
+     
+     
+     
